@@ -25,7 +25,8 @@
       <div class="main_title">
         <h1>N-RET</h1>
         <p>ありえない英語タイピング</p>
-        <button class="play" onclick="location.href='./main_pages/grade_choice.html'">今すぐプレイ</button>
+        
+        <a href="{{ route('groups.index') }}"><button class="play">今すぐプレイ</button></a>
       </div>
     </div>
 
