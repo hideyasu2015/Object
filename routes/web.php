@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//urlでgroupsがリクエストされたら、GroupsControllerで処理する。
+Route::resource('groups','GroupsController');
 

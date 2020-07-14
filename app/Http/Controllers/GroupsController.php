@@ -9,5 +9,8 @@ class GroupsController extends Controller
 {
     public function index()
     {
+        $groups = Groups::all();
         
+        return view('groups.index',compact('groups'));
+    }
 }
