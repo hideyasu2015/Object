@@ -12,16 +12,17 @@ class GroupsTableSeeder extends Seeder
      */
     public function run()
     {
-        $group_names = [
-            'grade_5',
-            'grade_6',
-            'jr_high_school'
-            ];
-            
-        foreach ($group_names as $group_name){
-            Groups::create([
-                'group' => $group_name
-                ]);
-        }
+        
+        DB::table('Groups')->insert([
+            'group' => '5年生レベル'
+        ]);
+        
+        DB::table('Groups')->insert([
+            'group' => '6年生レベル'
+        ]);
+        
+        DB::table('Groups')->insert([
+            'group' => '中学生レベル'
+        ]);
     }
 }
