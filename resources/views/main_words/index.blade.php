@@ -10,56 +10,12 @@
                     </div>
                     <div class="ul_scroll">
                         <ul>
+                            @foreach($main_words as $main_word)
+                            
                             <li>
-                                <p>can</p>
+                                <p>{{ $main_word -> main_word }}</p>
                             </li>
-                            <li>
-                                <p>break</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <p>other</p>
-                            <li></li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
-                            <li>
-                                <p>other</p>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
