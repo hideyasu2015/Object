@@ -10,15 +10,15 @@
                         </div>
                         <ul class="level_choices">
                             <li class="how_to"><img src="../img/logo1.jpg" alt="">
-                                <p><a href="{{ route('main_words.index') }}"><button class="level_choice_5">小学５年生レベル{{ $groups[1]->group }}</button></a></p>
+                                <p><a href="{{ route('main_words.index') }}"><button class="level_choice_5">{{ $groups[4]->group }}</button></a></p>
                             </li>
                             <li class="how_to"><img src="../img/logo2.jpg" alt="">
                                 <P><button class="level_choice_6"
-                                        onclick="location.href='typing_6.html'">小学６年生レベル{{ $groups[2]->group }}</button></p>
+                                        onclick="location.href='typing_6.html'">{{ $groups[5]->group }}</button></p>
                             </li>
                             <li class="how_to"><img src="../img/logo3.jpg" alt="">
                                 <p><button class="level_choice_7"
-                                        onclick="location.href='typing_7.html'">&emsp;中学生レベル&emsp;{{ $groups[3]->group }}</button>
+                                        onclick="location.href='typing_7.html'">{{ $groups[6]->group }}</button>
                                 </p>
                             </li>
                         </ul>
