@@ -40,8 +40,7 @@
                         </div>
                         <ul class="level_choices">
                             <li class="how_to"><img src="../img/logo1.jpg" alt="">
-                                <p><button class="level_choice_5"
-                                        onclick="location.href='typing_5.html'">小学５年生レベル{{ $groups[1]->group }}</button></p>
+                                <p><a href="{{ route('main_words.index') }}"><button class="level_choice_5">小学５年生レベル{{ $groups[1]->group }}</button></a></p>
                             </li>
                             <li class="how_to"><img src="../img/logo2.jpg" alt="">
                                 <P><button class="level_choice_6"

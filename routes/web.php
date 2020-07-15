@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 //urlでgroupsがリクエストされたら、GroupsControllerで処理する。
-Route::resource('groups','GroupsController');
-
+// Route::resource('groups','GroupsController');
 Route::get('/groups','GroupsController@index')->name('groups.index');
+
+// Route::resource('main_words','MainWordsController');
+Route::get('/main_words','MainWordsController@index')->name('main_words.index');

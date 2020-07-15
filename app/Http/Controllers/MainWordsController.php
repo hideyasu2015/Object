@@ -14,7 +14,9 @@ class MainWordsController extends Controller
      */
     public function index()
     {
-        //
+        $main_words = Main_words::all();
+        
+        return view('main_words.index',compact('main_words'));
     }
 
     /**
