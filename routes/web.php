@@ -20,4 +20,6 @@ Route::get('/', function () {
 Route::get('/groups','GroupsController@index')->name('groups.index');
 
 // Route::resource('main_words','MainWordsController');
-Route::get('/main_words','MainWordsController@index')->name('main_words.index');
+Route::get('/main_words','MainWordsController@index');
+
+Route::POST('/materials/{{$main_word -> id}}','MaterialsController@index');

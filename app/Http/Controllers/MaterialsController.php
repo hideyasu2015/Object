@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Main_words;
 use App\Materials;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,12 @@ class MaterialsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $main_words = Main_words::all();
+        $materials = Materials::all();
+        
+        return view('materials.index',compact('main_words','materials'));
     }
 
     /**

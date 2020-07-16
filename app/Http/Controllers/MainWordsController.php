@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Groups;
 use App\Main_words;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,11 @@ class MainWordsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $main_words = Main_words::all();
+        
+        $id = $request->id;
+        $main_words = Main_words::select($m)->get();
         
         return view('main_words.index',compact('main_words'));
     }
@@ -48,7 +51,7 @@ class MainWordsController extends Controller
      */
     public function show(Main_words $main_words)
     {
-        //
+        
     }
 
     /**

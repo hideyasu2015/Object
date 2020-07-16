@@ -12,9 +12,8 @@
                         <ul>
                             @foreach($main_words as $main_word)
                             <li>
-                                <form  action="/materials/{{$main_word -> id}}" method="POST">
-                                    
-                                    <input type="hidden" name="id" value="{{$main_word -> id}}">
+                                <form method="POST" action="{{ route('Materials.index') }}">
+                                    <input type="hidden" name="{{ $main_word -> id }}">
                                     <button class="main_word_btn">{{ $main_word -> main_word }}</button>
                                 </form>
                             </li>

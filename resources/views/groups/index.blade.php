@@ -9,18 +9,15 @@
                             <p>レベルをえらぼう</p>
                         </div>
                         <ul class="level_choices">
-                            <li class="how_to"><img src="../img/logo1.jpg" alt="">
-                                <p><a href="{{ route('main_words.index') }}"><button class="level_choice_5">{{ $groups[4]->group }}</button></a></p>
+                            @foreach($groups as $group)
+                                <form action="/main_words" method="get">
+                            <li class="how_to">
+                                <input type="hidden" name="id" value="{{ $group -> id }}"/>
+                                <button type="submit" class="level_choice_5">{{ $group -> group }}</button>
                             </li>
-                            <li class="how_to"><img src="../img/logo2.jpg" alt="">
-                                <P><button class="level_choice_6"
-                                        onclick="location.href='typing_6.html'">{{ $groups[5]->group }}</button></p>
-                            </li>
-                            <li class="how_to"><img src="../img/logo3.jpg" alt="">
-                                <p><button class="level_choice_7"
-                                        onclick="location.href='typing_7.html'">{{ $groups[6]->group }}</button>
-                                </p>
-                            </li>
+                            </form>
+                            @endforeach
+                            
                         </ul>
                     </div>
                 </div>
