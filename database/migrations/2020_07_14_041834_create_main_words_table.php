@@ -15,7 +15,7 @@ class CreateMainWordsTable extends Migration
     {
         Schema::create('main_words', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('group_id');
+            $table->integer('group_id')->unsigned();
             $table->string('main_word');
             $table->timestamps();
         });

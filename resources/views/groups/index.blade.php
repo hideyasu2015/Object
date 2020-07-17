@@ -10,6 +10,7 @@
                         </div>
                         <ul class="level_choices">
                             @foreach($groups as $group)
+                            <!--getメソッドで、id=group_idをリクエスト-->
                                 <form action="/main_words" method="get">
                             <li class="how_to">
                                 <input type="hidden" name="id" value="{{ $group -> id }}"/>

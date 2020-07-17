@@ -15,11 +15,14 @@ class MainWordsController extends Controller
      */
     public function index(Request $request)
     {
-        
+        // $requestのidを$idに格納
         $id = $request->id;
-        $main_words = Main_words::select($m)->get();
+        //Main_wordsデータを全て格納
+        $main_words = Main_words::all();
+        // $main_wordsにMain_wordsモデルの'group_id'を取得して格納
+        // $main_words = $Main_words->orderBy('group_id')->get();
         
-        return view('main_words.index',compact('main_words'));
+        return view('main_words.index',compact('main_words','id'));
     }
 
     /**
