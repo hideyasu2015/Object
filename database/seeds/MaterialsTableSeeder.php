@@ -47,7 +47,7 @@ class MaterialsTableSeeder extends Seeder
             'group_id'=>'2',
             'main_word' => "I'm",
             'english'=> "I'm Kabirunrun",
-            'japanese'=> '私は、かびルンルンです。',
+            'japanese'=> 'wta。',
             'photo'=> 'steven-libralon-Do1GQljlNk8-unsplash.jpg'
         ]);
         

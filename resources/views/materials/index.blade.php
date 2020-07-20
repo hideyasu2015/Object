@@ -10,11 +10,11 @@
                     </div>
                     <div class="ul_scroll">
                         <ul>
-                            @foreach($main_words as $main_word)
+                            @foreach($materials as $material)
                             <li>
-                                <form method="POST" action="{{ route('Materials.index') }}">
-                                    <input type="hidden" name="{{ $main_word -> id }}">
-                                    <button class="main_word_btn">{{ $main_word -> main_word }}</button>
+                                <form method="POST" action="">
+                                    <input type="hidden" name="{{ $material -> id }}">
+                                    <button class="main_word_btn">{{ $material -> main_word }}</button>
                                 </form>
                             </li>
                             @endforeach

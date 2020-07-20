@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Main_words;
+use App\Groups;
 use App\Materials;
 use Illuminate\Http\Request;
 
 class MaterialsController extends Controller
-{
+{  
     /**
      * Display a listing of the resource.
      *
@@ -15,10 +15,16 @@ class MaterialsController extends Controller
      */
     public function index(Request $request)
     {
-        $main_words = Main_words::all();
-        $materials = Materials::all();
+        $id = $request->id;
         
-        return view('materials.index',compact('main_words','materials'));
+        // 失敗例
+        // $query = Materials::query();
+        // $query->where('group_id','$id'); 
+        // $materials = $query->get();
+        
+        $materials = Materials::where('group_id','$id')->get();
+        
+        return view('materials.index',compact('materials'));
     }
 
     /**

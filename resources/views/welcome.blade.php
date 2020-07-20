@@ -24,7 +24,7 @@
       <div class="main_title">
         <h1>N-RET</h1>
         <p>ありえない英語タイピング</p>
-        <a href=" {{ route('groups.index')}}"><button class="play">今すぐプレイ</button></a>
+        <a href="/groups"><button class="play">今すぐプレイ</button></a>
       </div>
     </div>
 

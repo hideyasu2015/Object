@@ -11,17 +11,21 @@
 |
 */
 
+// ランディングページを表示
 Route::get('/', function () {
     return view('welcome');
 });
 
-//urlでgroupsがリクエストされたら、GroupsControllerで処理する。
-// Route::resource('groups','GroupsController');
-Route::get('/groups','GroupsController@index')->name('groups.index');
+// グループ（レベル）選択画面を表示
+Route::get('groups', 'GroupsController@index');
 
-// Route::resource('main_words','MainWordsController');
+// うまくいかない
+// Route::get('/groups/{id}/materials','MaterialsController@index');
 
-// MainWordsControllerのindex()を実行
-Route::get('/main_words','MainWordsController@index');
+// タイピング画面を表示
+Route::get('materials','MaterialsController@index');
 
-Route::POST('/materials/{{$main_word -> id}}','MaterialsController@index');
+
+if ( env('APP-EVV') === 'local'){
+    URL::forceScheme('https');
+}
